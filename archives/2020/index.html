@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Archives: 2020 | 假的博客</title>
+  <meta name="description" content="瞎搞、记录">
+  <meta name="keywords" content>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="假的博客">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="瞎搞、记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="假的博客">
+<meta property="og:url" content="https://blog.110.sh/archives/2020/index.html">
+<meta property="og:site_name" content="假的博客">
+<meta property="og:description" content="瞎搞、记录">
+<meta property="og:locale" content="zh-cn">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="假的博客">
+<meta name="twitter:description" content="瞎搞、记录">
+    
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="//cdn.bootcss.com/node-waves/0.7.5/waves.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+</html>
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				假的博客
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								主页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								存档
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-about' href='/about'>
+								关于
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				主页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				存档
+			</a>
+		
+			<a href="/about" class="nav-about nav">
+				关于
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        
+	
+  <script>
+    window.subData= { title:'Year : 2020'}
+  </script>
+
+<section class="post-list">
+	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/12/28/linux-bluetooth/">
+        Linux 驱动蓝牙
+      </a>
+    </h2>
+    
+    <time>
+      12月 28, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/linux/">linux</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="Linux-驱动蓝牙"><a href="#Linux-驱动蓝牙" class="headerlink" title="Linux 驱动蓝牙"></a>Linux 驱动蓝牙</h1><p>搞了台新设备，设备带一个<code>AX200</code>网卡，又有Wi-Fi又有蓝牙，Wi-Fi直接免驱，蓝牙却无法驱动，经过研究搞定了这个事情，记录下。</p>
+<h2 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h2><ul>
+<li>检查蓝牙服务</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service bluetooth status</span><br><span class="line"><span class="comment"># 如果显示 masked 就输入下面的命令</span></span><br><span class="line">systemctl unmask bluetooth.service</span><br></pre></td></tr></table></figure>
+<ol>
+<li>安装蓝牙控制套件</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install bluez -y</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>获取蓝牙设备</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bluetoothctl show</span><br><span class="line"><span class="comment"># 如果显示 No default controller available 则表示没有驱动起来</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>安装缺少的驱动</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看蓝牙情况</span></span><br><span class="line">dmesg | grep blue</span><br><span class="line"><span class="comment"># 我这里显示</span></span><br><span class="line"><span class="comment"># bluetooth hci0: Direct firmware load for intel/ibt-20-1-3.sfi failed with error -2</span></span><br><span class="line"><span class="comment"># 表示缺少 ibt-20-1-3.sfi 驱动文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入驱动文件夹</span></span><br><span class="line"><span class="built_in">cd</span> /lib/firmware/intel</span><br><span class="line"><span class="comment"># 下载缺失的驱动，如果你缺少的是别的驱动，则替换掉文件名即可</span></span><br><span class="line">wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/intel/ibt-20-1-3.sfi</span><br><span class="line"><span class="comment"># 下载完毕后重启设备</span></span><br><span class="line">reboot now</span><br><span class="line"><span class="comment"># 再次查看蓝牙设备</span></span><br><span class="line">bluetoothctl show</span><br><span class="line"><span class="comment"># 此时应该已经有内容了</span></span><br><span class="line"><span class="comment"># root@vm:~# bluetoothctl show</span></span><br><span class="line"><span class="comment"># Controller **:**:**:**:**:** (public)</span></span><br><span class="line"><span class="comment"># 	Name: vm</span></span><br><span class="line"><span class="comment"># 	Alias: vm</span></span><br><span class="line"><span class="comment"># 	Class: 0x00000104</span></span><br><span class="line"><span class="comment"># 	Powered: yes</span></span><br><span class="line"><span class="comment"># 	Discoverable: no</span></span><br><span class="line"><span class="comment"># 	Pairable: yes</span></span><br><span class="line"><span class="comment"># 	UUID: Generic Attribute Profile (00001801-0000-1000-8000-00805f9b34fb)</span></span><br><span class="line"><span class="comment"># 	UUID: A/V Remote Control        (0000110e-0000-1000-8000-00805f9b34fb)</span></span><br><span class="line"><span class="comment"># 	UUID: PnP Information           (00001200-0000-1000-8000-00805f9b34fb)</span></span><br><span class="line"><span class="comment"># 	UUID: A/V Remote Control Target (0000110c-0000-1000-8000-00805f9b34fb)</span></span><br><span class="line"><span class="comment"># 	UUID: Generic Access Profile    (00001800-0000-1000-8000-00805f9b34fb)</span></span><br><span class="line"><span class="comment"># 	Modalias: usb:v1D6Bp0246d0532</span></span><br><span class="line"><span class="comment"># 	Discovering: no</span></span><br></pre></td></tr></table></figure>
+<h2 id="设备控制"><a href="#设备控制" class="headerlink" title="设备控制"></a>设备控制</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入蓝牙控制 如果进入了，应该是这样的 [bluetooth]# </span></span><br><span class="line">bluetoothctl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启扫描 屏幕上会出现一堆设备的 MAC 地址</span></span><br><span class="line">scan on</span><br><span class="line"><span class="comment"># Discovery started</span></span><br><span class="line"><span class="comment"># [CHG] Controller E0:D4:E8:94:07:86 Discovering: yes</span></span><br><span class="line"><span class="comment"># [NEW] Device 54:21:C3:BC:77:1A 54-21-C3-BC-77-19</span></span><br><span class="line"><span class="comment"># [NEW] Device E9:33:F9:B9:6B:AF MX Keys</span></span><br><span class="line"><span class="comment"># [NEW] Device 48:AB:38:E9:67:89 48-AB-38-E9-67-84</span></span><br><span class="line"><span class="comment"># [NEW] Device F4:5C:89:AB:57:61 F4-5C-89-AB-57-66</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭扫描</span></span><br><span class="line">scan off</span><br><span class="line"></span><br><span class="line"><span class="comment"># 连接指定设备，屏幕上会出现不少内容，主要看</span></span><br><span class="line"><span class="comment"># 出现 Connection successful 则连接成功</span></span><br><span class="line">connect E9:33:F9:B9:6B:AF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在蓝牙控制中 如果链接了蓝牙设备，或者断开了蓝牙设备都会有提示</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有设备链接</span></span><br><span class="line"><span class="comment"># [CHG] Device E9:33:F9:B9:6B:AF Connected: yes</span></span><br><span class="line"><span class="comment"># [CHG] Device E9:33:F9:B9:6B:AF ServicesResolved: yes</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有设备断开</span></span><br><span class="line"><span class="comment"># [CHG] Device E9:33:F9:B9:6B:DE ServicesResolved: no</span></span><br><span class="line"><span class="comment"># [CHG] Device E9:33:F9:B9:6B:DE Connected: no</span></span><br></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/linux/">linux</a>
+      
+        <a href="/tags/bluetooth/">bluetooth</a>
+      
+        <a href="/tags/AX200/">AX200</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/09/24/how-to-create-bootable-windows-USB-on-macOS/">
+        如何在 macOS 下创建 Windows 安装U盘
+      </a>
+    </h2>
+    
+    <time>
+      9月 24, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/macOS/">macOS</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="如何在-macOS-下创建-Windows-安装U盘"><a href="#如何在-macOS-下创建-Windows-安装U盘" class="headerlink" title="如何在 macOS 下创建 Windows 安装U盘"></a>如何在 macOS 下创建 Windows 安装U盘</h1><p>即使所有设备都是苹果的东西了，但是还是避免不了身边的人需要使用 Windows 电脑，或者重装 Windows 系统，这时就需要创建 Windows 安装盘了。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li>U盘（存储空间需要大于等于 8G，且要求格式化U盘）</li>
+<li>Windows 系统镜像（ISO格式）</li>
+<li>wimlib-imagex 大文件分割</li>
+<li>rsync 文件复制</li>
+</ul>
+<h3 id="安装必备工具"><a href="#安装必备工具" class="headerlink" title="安装必备工具"></a>安装必备工具</h3><p>使用 brew 安装这两个工具，如果已经安装请跳过</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install rsync wimlib</span><br></pre></td></tr></table></figure>
+<h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2><ol>
+<li><p>找到自己的U盘，如 <code>disk3</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>格式化自己的U盘，并起名为 <code>WINDOWS10</code>，请务必确认替换掉<code>disk3</code>为你的U盘</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">diskutil eraseDisk MS-DOS <span class="string">"WINDOWS10"</span> MBR disk3</span><br><span class="line"><span class="comment"># 如果你清楚什么是 MBR/GPT 你也可以选择 GPT</span></span><br><span class="line">diskutil eraseDisk MS-DOS <span class="string">"WINDOWS10"</span> GPT disk3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>装载系统盘，直接双击挂载，如果你觉得手动方式一点都不酷，你也可以使用命令挂载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdiutil mount ~/Downloads/Win10_2004_Chinese(Simplified)_x64.iso</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制除了<code>sources/install.wim</code>文件到U盘</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -vha --exclude=sources/install.wim /Volumes/CCCOMA_X64FRE_ZH-CN_DV9/* /Volumes/WINDOWS10</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分割复制<code>sources/install.wim</code>到U盘</p>
+<p>因为这个文件太大，fat32格式装不下，会报错：<code>File too large</code>，所以需要分割复制。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wimlib-imagex split /Volumes/CCCOMA_X64FRE_ZH-CN_DV9/sources/install.wim /Volumes/WINDOWS10/sources/install.swm 4000</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>至此全部完成，现在可以直接当做 Windows 的启动盘了。</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/windows/">windows</a>
+      
+        <a href="/tags/macOS/">macOS</a>
+      
+        <a href="/tags/bootable-USB/">bootable USB</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/08/24/ubuntu-setup-softether-vpn/">
+        使用 SoftEther 搭建 L2TP VPN
+      </a>
+    </h2>
+    
+    <time>
+      8月 24, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Linux/">Linux</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="使用-SoftEther-搭建-L2TP-VPN"><a href="#使用-SoftEther-搭建-L2TP-VPN" class="headerlink" title="使用 SoftEther 搭建 L2TP VPN"></a>使用 SoftEther 搭建 L2TP VPN</h1><p>在openwrt上搭建 L2TP VPN 都推荐用 openswan、libreswan 比较繁琐，softether在openwrt上不知道为什么总是丢失配置文件，所以要在Linux上配置，softether这个简单易用还容易管理，也能完成多地组网的复杂操作。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装编译工具</span></span><br><span class="line">apt install build-essential gcc make wget tzdata git libreadline-dev libncurses-dev libssl-dev zlib1g-dev</span><br><span class="line"><span class="comment"># 下载源码</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/SoftEtherVPN/SoftEtherVPN_Stable.git</span><br><span class="line"><span class="comment"># 编译，我编译的时候丝般顺滑，一点报错都没有（Ubuntu 20.04）</span></span><br><span class="line"><span class="built_in">cd</span> SoftEtherVPN_Stable/</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h3 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h3><blockquote>
+<p>创建文件：/lib/systemd/system/vpnserver.service</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=SoftEther VPN Server</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/bin/vpnserver start</span><br><span class="line">ExecStop=/usr/bin/vpnserver stop</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启这个服务</span></span><br><span class="line">systemctl <span class="built_in">enable</span> vpnserver.service</span><br><span class="line"><span class="comment"># 启动服务</span></span><br><span class="line">service vpnserver start</span><br></pre></td></tr></table></figure>
+<h2 id="配置L2TP"><a href="#配置L2TP" class="headerlink" title="配置L2TP"></a>配置L2TP</h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>咕了，这东西配置起来很容易很容易，教程特别多，都是中文的，大致说一下有两种配置方式：</p>
+<p>一种是通过命令行配置<code>vpncmd</code>，这里如果你的Linux服务器是中文的，那么这个<code>vpncmd</code>的命令帮助都是中文的，简直太简单，这个<code>vpncmd</code>值得好好玩一玩，GUI配置有些时候着实是不方便。</p>
+<p>另一种是通过管理程序配置，也是中文的，配置工具下载 <a href="https://www.softether-download.com/cn.aspx?product=softether。" target="_blank" rel="noopener">https://www.softether-download.com/cn.aspx?product=softether。</a></p>
+<p>如果想要访问内网的东西，需要开启<code>SecureNAT</code>。</p>
+<p>参考配置教程：</p>
+<ol>
+<li><a href="https://noter.tw/4524/softether-vpn-架設記錄/" target="_blank" rel="noopener">中文：https://noter.tw/4524/softether-vpn-架設記錄/</a></li>
+<li><a href="https://www.softether.org/4-docs/2-howto/9.L2TPIPsec_Setup_Guide_for_SoftEther_VPN_Server/1.Setup_L2TP%2F%2F%2F%2FIPsec_VPN_Server_on_SoftEther_VPN_Server" target="_blank" rel="noopener">官方英文（不推荐）：https://www.softether.org/4-docs/2-howto/9.L2TPIPsec_Setup_Guide_for_SoftEther_VPN_Server/1.Setup_L2TP%2F%2F%2F%2FIPsec_VPN_Server_on_SoftEther_VPN_Server</a></li>
+<li><a href="https://libertyleadingnetwork.blogspot.com/2018/01/softethervpsvpn.html" target="_blank" rel="noopener">中文：https://libertyleadingnetwork.blogspot.com/2018/01/softethervpsvpn.html</a></li>
+<li><a href="http://blog.dengxj.com/archives/9/" target="_blank" rel="noopener">中文：http://blog.dengxj.com/archives/9/</a></li>
+</ol>
+<h3 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h3><p>如果你和我一样是在内网配置的，且有公网IP，需要在路由器上转发<code>UDP:500</code>和<code>UDP:4500</code>出去，再搞一个<code>DDNS</code>这样就可以远程访问家里了。</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/VPN-L2TP-SoftEther-Linux/">VPN, L2TP, SoftEther, Linux</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/06/15/ubuntu-make-vmfs-tool/">
+        Ubuntu 编译 vmfs-tool
+      </a>
+    </h2>
+    
+    <time>
+      6月 15, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Linux/">Linux</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="Ubuntu-编译-vmfs-tool"><a href="#Ubuntu-编译-vmfs-tool" class="headerlink" title="Ubuntu 编译 vmfs-tool"></a>Ubuntu 编译 vmfs-tool</h1><p>VMFS 文件系统想要在 linux 里读取，需要使用<code>vmfs-fuse</code>，但是这个工具已经下架了，所以需要自己编译,</p>
+<p>其实编译整理来说就是缺什么下什么，然后就编译完了。</p>
+<p>我的系统：ubuntu 20.04</p>
+<h2 id="vmfs-tools-下载地址"><a href="#vmfs-tools-下载地址" class="headerlink" title="vmfs-tools 下载地址"></a>vmfs-tools 下载地址</h2><p>如果只做读取使用这个就可以了</p>
+<ul>
+<li><p><a href="http://mirrors.kernel.org/ubuntu/pool/universe/v/vmfs-tools/vmfs-tools_0.2.5-1_amd64.deb" target="_blank" rel="noopener">http://mirrors.kernel.org/ubuntu/pool/universe/v/vmfs-tools/vmfs-tools_0.2.5-1_amd64.deb</a></p>
+</li>
+<li><p><a href="http://mirrors.kernel.org/ubuntu/pool/universe/v/vmfs-tools/vmfs-tools_0.2.5-1_i386.deb" target="_blank" rel="noopener">http://mirrors.kernel.org/ubuntu/pool/universe/v/vmfs-tools/vmfs-tools_0.2.5-1_i386.deb</a></p>
+</li>
+</ul>
+<p>下载下来后，直接安装即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opkg -i vmfs-tools_0.2.5-1_amd64.deb</span><br></pre></td></tr></table></figure>
+<h2 id="挂载-VMFS-文件系统"><a href="#挂载-VMFS-文件系统" class="headerlink" title="挂载 VMFS 文件系统"></a>挂载 VMFS 文件系统</h2><p>其实挂载<code>VMFS 文件系统</code>很简单，类似 mount 命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看哪个是 VMFS</span></span><br><span class="line">fdisk -l</span><br><span class="line"><span class="comment"># 挂载 /dev/sdb3</span></span><br><span class="line">mkdir /tmp/vmfs</span><br><span class="line">vmfs-fuse /dev/sdb3 /tmp/vmfs</span><br></pre></td></tr></table></figure>
+<h2 id="或者你也可以手动编译"><a href="#或者你也可以手动编译" class="headerlink" title="或者你也可以手动编译"></a>或者你也可以手动编译</h2><h3 id="安装需要的库"><a href="#安装需要的库" class="headerlink" title="安装需要的库"></a>安装需要的库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install git build-essential gcc pkg-config xsltproc libfuse-dev uuid-dev</span><br></pre></td></tr></table></figure>
+<h3 id="下载源码编译"><a href="#下载源码编译" class="headerlink" title="下载源码编译"></a>下载源码编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载源码</span></span><br><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/glandium/vmfs-tools.git</span><br><span class="line"><span class="built_in">cd</span> vmfs-tools</span><br><span class="line"><span class="comment"># 开始编译</span></span><br><span class="line">./configure </span><br><span class="line">make</span><br><span class="line">gcc -Wall -O2 -g -D_FILE_OFFSET_BITS=64 -Ivmfs-fuse -Ilibvmfs -I/usr/include/uuid -D_FILE_OFFSET_BITS=64 -I/usr/include/fuse  -c -o vmfs-fuse/vmfs-fuse.o vmfs-fuse/vmfs-fuse.c</span><br><span class="line">gcc -o vmfs-fuse/vmfs-fuse vmfs-fuse/vmfs-fuse.o libvmfs/libvmfs.a  -luuid -lfuse -pthread</span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">make install</span><br><span class="line">install -s -m 0755 debugvmfs/debugvmfs /usr/<span class="built_in">local</span>/sbin/</span><br><span class="line">install -s -m 0755 vmfs-lvm/vmfs-lvm /usr/<span class="built_in">local</span>/sbin/</span><br><span class="line">install -s -m 0755 vmfs-fuse/vmfs-fuse /usr/<span class="built_in">local</span>/sbin/</span><br><span class="line">install -s -m 0755 fsck.vmfs/fsck.vmfs /usr/<span class="built_in">local</span>/sbin/</span><br></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Ubuntu/">Ubuntu</a>
+      
+        <a href="/tags/Linux/">Linux</a>
+      
+        <a href="/tags/编译/">编译</a>
+      
+        <a href="/tags/vmfs/">vmfs</a>
+      
+        <a href="/tags/esxi/">esxi</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/06/15/esxi-ssh-login-without-password/">
+        ESXI SSH 免密码登陆
+      </a>
+    </h2>
+    
+    <time>
+      6月 15, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/折腾/">折腾</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="ESXI-SSH-免密码登陆"><a href="#ESXI-SSH-免密码登陆" class="headerlink" title="ESXI SSH 免密码登陆"></a>ESXI SSH 免密码登陆</h1><p>ESXI 的 <code>authorized_keys</code> 在 <code>/etc/ssh/keys-root/authorized_keys</code> 所以 ssh-copy-id 不会成功。</p>
+<p>查看自己的公钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>把自己的公钥写入到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"你的公钥"</span> &gt; /etc/ssh/keys-root/authorized_keys</span><br></pre></td></tr></table></figure>
+<p>完毕</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/ESXI/">ESXI</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/06/11/change-hostname-on-mac/">
+        Mac 修改 hostname
+      </a>
+    </h2>
+    
+    <time>
+      6月 11, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/黑苹果/">黑苹果</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="Mac-修改-hostname"><a href="#Mac-修改-hostname" class="headerlink" title="Mac 修改 hostname"></a>Mac 修改 hostname</h1><p>黑苹果，前一阵子升级了系统，顺利升级，唯独发现主机名变成了<code>iMacPro</code>，这就有些难受了，导致 airdrop 时出现了 两个机器，所以一定要修改回来，修改命令如下。</p>
+<ol>
+<li><p>执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo scutil --<span class="built_in">set</span> LocalHostName RyzenMacPro</span><br><span class="line">sudo scutil --<span class="built_in">set</span> HostName RyzenMacPro</span><br><span class="line">sudo scutil --<span class="built_in">set</span> ComputerName RyzenMacPro</span><br><span class="line">sudo hostname RyzenMacPro</span><br><span class="line">dscacheutil -flushcache</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启路由器，不然 netbios 名称修改不过来</p>
+</li>
+<li><p>重启电脑，最好在重启路由器的操作执行过后就直接重启电脑</p>
+</li>
+</ol>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Mac/">Mac</a>
+      
+        <a href="/tags/Hackintosh/">Hackintosh</a>
+      
+        <a href="/tags/Ryzentosh/">Ryzentosh</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/06/01/github-action-auto-deploy-hexo/">
+        GitHub action 自动部署 Hexo
+      </a>
+    </h2>
+    
+    <time>
+      6月 1, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/折腾/">折腾</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="GitHub-action-自动部署-Hexo"><a href="#GitHub-action-自动部署-Hexo" class="headerlink" title="GitHub action 自动部署 Hexo"></a>GitHub action 自动部署 Hexo</h1><p>首先贴上我的 yaml 代码，这可能是目前最简洁的了，因为加上了缓存，所以执行起来也较快，使用的是 <a href="https://github.com/yrpang/github-actions-hexo。" target="_blank" rel="noopener">https://github.com/yrpang/github-actions-hexo。</a></p>
+<p><img src="https://img.110.sh/uPic/2020/image-20200601020620185.png" alt="执行耗时"></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">blog</span></span><br><span class="line"><span class="attr">on:</span> <span class="string">[push]</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v1</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">node</span> <span class="string">modules</span> <span class="comment"># 缓存 node_modules</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;runner.OS&#125;&#125;-$&#123;&#123;hashFiles('**/package-lock.json')&#125;&#125;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">yrpang/github-actions-hexo@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">TZ:</span> <span class="string">Asia/Shanghai</span>  <span class="comment"># 设置时区</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">deploykey:</span> <span class="string">$&#123;&#123;secrets.DEPLOY_KEY&#125;&#125;</span> <span class="comment"># 这里注意对应自己配置的KEY的名称</span></span><br><span class="line">          <span class="attr">username:</span> <span class="string">github-action</span></span><br><span class="line">          <span class="attr">email:</span> <span class="string">action@github</span></span><br></pre></td></tr></table></figure>
+<p>使用 GitHub action 还是老生常谈的那一套<code>secret key</code>和<code>deploy key</code>就不多说了，参考：</p>
+<ul>
+<li>英文：<a href="https://github.com/marketplace/actions/hexo-action#pre-requisites" target="_blank" rel="noopener">https://github.com/marketplace/actions/hexo-action#pre-requisites</a></li>
+<li>中文：<a href="https://hdj.me/github-actions-hexo-cicd/#配置-GitHub-仓库" target="_blank" rel="noopener">https://hdj.me/github-actions-hexo-cicd/#配置-GitHub-仓库</a></li>
+<li>中文：<a href="https://gythialy.github.io/deploy-hexo-to-github-pages-via-github-actions/#准备工作" target="_blank" rel="noopener">https://gythialy.github.io/deploy-hexo-to-github-pages-via-github-actions/#准备工作</a></li>
+</ul>
+<p>与其它不太一样的是：</p>
+<ol>
+<li><p>源码的<code>package.json</code>文件中<strong>必须</strong>包含<code>hexo-deployer-git</code></p>
+</li>
+<li><p>源码的<code>_config.yml</code>文件中<strong>必须</strong>包含<code>deploy</code>块，且 repo 必须为 ssh 形式，如：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ...</span></span><br><span class="line"><span class="comment"># 部署</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="comment"># 这里填写博客 repo 地址，非源码地址</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:YOU_USERNAME/blog.git</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如果上面的条件确定满足了，直接复制上面的 action 代码使用即可。</p>
+<p>本篇文章由 GitHub action 自动生成。</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/github/">github</a>
+      
+        <a href="/tags/hexo/">hexo</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/05/30/image-test/">
+        我的图床相关内容
+      </a>
+    </h2>
+    
+    <time>
+      5月 30, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/折腾/">折腾</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="我的图床相关内容"><a href="#我的图床相关内容" class="headerlink" title="我的图床相关内容"></a>我的图床相关内容</h1><p>终于没忍住诱惑，还是用上了图床，特地来测试一下。</p>
+<p><img src="https://img.110.sh/uPic/2020/image-20200531000941619.png" alt="image-20200531000941619"></p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>软件：uPic + Typora 配合</p>
+<p>图床：Github + 自定义域名</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装 uPic Typora</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install upic typora</span><br></pre></td></tr></table></figure>
+<h2 id="配置图床"><a href="#配置图床" class="headerlink" title="配置图床"></a>配置图床</h2><p><a href="https://blog.svend.cc/upic/" target="_blank" rel="noopener">官方教程</a></p>
+<h2 id="Github-图床提醒"><a href="#Github-图床提醒" class="headerlink" title="Github 图床提醒"></a>Github 图床提醒</h2><p>在 github 图床的设置中，自定义域名设置与 github 的 pages 不同，需要加上 <code>https://</code> 或 <code>http://</code>，如 img.baidu.com，要写成 <a href="https://img.baidu.com" target="_blank" rel="noopener">https://img.baidu.com</a> ，否则明明返回了图片地址 typora 依然会认为上传失败。</p>
+<p>看来 typora 的正则比较严格 😔</p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/图床/">图床</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/05/30/resize-pve-root/">
+        PVE 增加 pve/root 容量
+      </a>
+    </h2>
+    
+    <time>
+      5月 30, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/pve/">pve</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="PVE-增加-pve-root-容量"><a href="#PVE-增加-pve-root-容量" class="headerlink" title="PVE 增加 pve/root 容量"></a>PVE 增加 pve/root 容量</h1><p>PVE 在安装时默认不会使用全部硬盘容量用作 pve/root ，为的是存储其它内容，诸如dump，但是我有其它的硬盘存储备份，所以需要把 pve/root 扩容。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 增加全部剩余空间</span></span><br><span class="line">lvresize -l +100%FREE /dev/pve/root</span><br><span class="line"><span class="comment"># 你也可以增加指定容量</span></span><br><span class="line"><span class="comment"># lvresize -l +10G /dev/pve/root</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加后确定扩容</span></span><br><span class="line">resize2fs /dev/mapper/pve-root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看是否扩容成功</span></span><br><span class="line"></span><br><span class="line">lvdisplay</span><br></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/pve/">pve</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/05/28/pve-hdd/">
+        PVE 硬盘相关
+      </a>
+    </h2>
+    
+    <time>
+      5月 28, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/Linux/">Linux</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="PVE-硬盘相关"><a href="#PVE-硬盘相关" class="headerlink" title="PVE 硬盘相关"></a>PVE 硬盘相关</h1><h2 id="休眠"><a href="#休眠" class="headerlink" title="休眠"></a>休眠</h2><p>PVE 硬盘不休眠的原因基本都是由于pvestatd一直在读取硬盘信息，导致不会休眠</p>
+<p>所以问题就比较简单了</p>
+<p>第一种方法 （比较粗暴，不推荐）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pvestatd stop</span><br></pre></td></tr></table></figure>
+<p>第二种方法</p>
+<p>修改<code>/etc/lvm/lvm.conf</code>文件，开启 lvm 的 metadata 的缓存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">sed -i <span class="string">'s/use_lvmetad = 0/use_lvmetad = 1/g'</span> /etc/lvm/lvm.conf</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">pvestatd restart</span><br></pre></td></tr></table></figure>
+<p>如果开启的话，就会缓存 lvm 的信息，就不需要再读取硬盘获取了</p>
+<p>第三种方法</p>
+<p>修改<code>/etc/lvm/lvm.conf</code>文件，过滤不需要监控的盘</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加 "r|/dev/sd*|" 到 global_filter</span></span><br><span class="line">global_filter = [ <span class="string">"r|/dev/zd.*|"</span>, <span class="string">"r|/dev/mapper/pve-.*|"</span>, <span class="string">"r|/dev/sd*|"</span> ]</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">pvestatd restart</span><br></pre></td></tr></table></figure>
+<p>通过以上方式允许硬盘休眠后，可以让硬盘立即休眠来测试下是否还会被唤醒</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 立即休眠</span></span><br><span class="line">hdparm -y /dev/sdc</span><br><span class="line"><span class="comment"># 设置硬盘休眠时间为 5 分钟</span></span><br><span class="line">hdparm -S 60 /dev/sdc</span><br></pre></td></tr></table></figure>
+<p>这里-S取值设定逻辑比较奇怪，本文列出部分常见取值供选：</p>
+<blockquote>
+<p>30 = 2 min 30 sec</p>
+<p>60 = 5 minutes</p>
+<p>120 = 10 minutes</p>
+<p>180 = 15 minutes</p>
+<p>241 = 30 minutes</p>
+<p>242 = 1 hour</p>
+<p>243 = 1.5 hours</p>
+<p>244 = 2 hours</p>
+</blockquote>
+<h3 id="持久化保存-休眠时间"><a href="#持久化保存-休眠时间" class="headerlink" title="持久化保存 休眠时间"></a>持久化保存 休眠时间</h3><p>不要添加到各种开机启动的脚本、crontab 中</p>
+<p>编辑<code>/etc/hdparm.conf</code>就可以做到持久化保存休眠配置</p>
+<h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><p>在 command_line 处</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">command_line &#123;</span><br><span class="line">    hdparm -S 60 /dev/disk/by-uuid/f6c52265-d89f-43a4-b03b-302c3dadb215 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><p>在 特定硬盘处</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里也可以改为 sdc 或者 /dev/disk/by-label/8TB，但是 UUID 最稳定</span></span><br><span class="line">/dev/disk/by-uuid/91e32677-0656-45b8-bcf5-14acce39d9c2 &#123;</span><br><span class="line">    spindown_time = 60</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="挂载硬盘-给-lxc"><a href="#挂载硬盘-给-lxc" class="headerlink" title="挂载硬盘 给 lxc"></a>挂载硬盘 给 lxc</h2><p>首先需要注意的是，创建 LXC 容器需要在创建时开启了<strong>特权模式</strong>，否则只能读取但无法写入数据。</p>
+<blockquote>
+<p>假设 lxc id 是 202</p>
+</blockquote>
+<h3 id="使用-sd-挂载设备-（不推荐）"><a href="#使用-sd-挂载设备-（不推荐）" class="headerlink" title="使用 sd* 挂载设备 （不推荐）"></a>使用 sd* 挂载设备 （不推荐）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 停止</span></span><br><span class="line">pct stop 202</span><br><span class="line"><span class="comment"># 挂载 sdc 到 /data</span></span><br><span class="line">pct <span class="built_in">set</span> 202 -mp0 /dev/sdc,mp=/data</span><br><span class="line"><span class="comment"># 开机</span></span><br><span class="line">pct start 202</span><br></pre></td></tr></table></figure>
+<h3 id="使用-UUID-挂载设备（推荐）"><a href="#使用-UUID-挂载设备（推荐）" class="headerlink" title="使用 UUID 挂载设备（推荐）"></a>使用 UUID 挂载设备（推荐）</h3><p>因为 /dev/sdb /dev/sdc 这种形式可能会随着插拔设备之类的发生变动，或改变顺序，而 UUID 则不会改变</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 停止</span></span><br><span class="line">pct stop 202</span><br><span class="line"><span class="comment"># 获取设备 UUID</span></span><br><span class="line">blkid /dev/sdc</span><br><span class="line"><span class="comment"># 挂载 sdc 到 /data</span></span><br><span class="line">pct <span class="built_in">set</span> 202 -mp0 /dev/disk/by-uuid/312e15c4-c8e8-4465-8099-2f1cf007fe92,mp=/data</span><br><span class="line"><span class="comment"># 开机</span></span><br><span class="line">pct start 202</span><br></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/linux/">linux</a>
+      
+        <a href="/tags/pve/">pve</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/02/18/PVE 移动虚拟磁盘到另一台虚拟机/">
+        PVE 移动虚拟磁盘到另一台虚拟机
+      </a>
+    </h2>
+    
+    <time>
+      2月 18, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/PVE/">PVE</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="PVE-移动虚拟磁盘到另一台虚拟机"><a href="#PVE-移动虚拟磁盘到另一台虚拟机" class="headerlink" title="PVE 移动虚拟磁盘到另一台虚拟机"></a>PVE 移动虚拟磁盘到另一台虚拟机</h1><blockquote>
+<p>准备工作，原主机和目标主机都要关机，然后把原主机的硬盘卸载</p>
+</blockquote>
+<ol>
+<li><p>磁盘改名</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lvrename /dev/pve/vm-103-disk-1 /dev/pve/vm-200-disk-1</span><br><span class="line"><span class="comment"># Renamed "vm-103-disk-1" to "vm-200-disk-1" in volume group "pve"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看配置结构</p>
+<p> 不知道怎么挂载的就手动添加一个硬盘查看下配置结构</p>
+<p> 这里我添加了一个挂载点 /test ，大小 8G</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/pve/nodes/pve-asus/lxc/200.conf</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">arch: amd64</span><br><span class="line">cores: 2</span><br><span class="line">hostname: localService1804</span><br><span class="line">memory: 2048</span><br><span class="line">mp0: local-lvm:vm-200-disk-1,mp=/test,size=8G</span><br><span class="line">net0: name=eth0,bridge=vmbr0,firewall=1,gw=10.0.0.1,hwaddr=DA:7D:AB:9D:AB:97,ip=10.0.0.250/24,type=veth</span><br><span class="line">ostype: ubuntu</span><br><span class="line">rootfs: local-lvm:vm-200-disk-0,size=8G</span><br><span class="line">swap: 2048</span><br><span class="line">unprivileged: 1</span><br></pre></td></tr></table></figure>
+<p> 我这个目的地是 lxc 的，所以路径不一样，如果是 kvm 就去 <code>/etc/pve/nodes/pve-asus/qemu-server/200.conf</code></p>
+</li>
+<li><p>编辑配置文件</p>
+<p> 添加 要挂载的磁盘 上去</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"local-lvm:vm-200-disk-1,mp=/data,size=32G"</span> &gt;&gt; /etc/pve/nodes/pve-asus/lxc/200.conf</span><br></pre></td></tr></table></figure>
+<p> 此时在 web 界面上，硬盘应该已经出现在目标主机了</p>
+</li>
+<li><p>开机验货</p>
+<p> 完成</p>
+</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a href="https://pve.proxmox.com/wiki/Moving_disk_image_from_one_KVM_machine_to_another" target="_blank" rel="noopener">https://pve.proxmox.com/wiki/Moving_disk_image_from_one_KVM_machine_to_another</a></li>
+</ol>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/PVE/">PVE</a>
+      
+        <a href="/tags/lxc/">lxc</a>
+      
+        <a href="/tags/kvm/">kvm</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2020/01/30/xfs-filesystem-grow/">
+        XFS 文件系统扩充
+      </a>
+    </h2>
+    
+    <time>
+      1月 30, 2020
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/hackintosh/">hackintosh</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <h1 id="XFS-文件系统扩充"><a href="#XFS-文件系统扩充" class="headerlink" title="XFS 文件系统扩充"></a>XFS 文件系统扩充</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接扩充到最大大小</span></span><br><span class="line">xfs_growfs 挂载的目录</span><br><span class="line"><span class="comment"># 如</span></span><br><span class="line">xfs_growfs /data</span><br></pre></td></tr></table></figure>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/hackintosh/">hackintosh</a>
+      
+        <a href="/tags/mojave/">mojave</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+</section>
+
+
+
+      </div>
+      <aside class='l_side'>
+        
+  
+<div class="m_widget tagcloud">
+    <div class="header">Tags</div>
+    <div class='content'>
+        <a href="/tags/AX200/" style="font-size: 14px; color: #808080">AX200</a> <a href="/tags/Aria2/" style="font-size: 14px; color: #808080">Aria2</a> <a href="/tags/Caddy/" style="font-size: 14px; color: #808080">Caddy</a> <a href="/tags/DLNA/" style="font-size: 14px; color: #808080">DLNA</a> <a href="/tags/Docker/" style="font-size: 17.43px; color: #373737">Docker</a> <a href="/tags/ESXI/" style="font-size: 14px; color: #808080">ESXI</a> <a href="/tags/Git/" style="font-size: 14px; color: #808080">Git</a> <a href="/tags/Gogs/" style="font-size: 14px; color: #808080">Gogs</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #808080">HTTP</a> <a href="/tags/Hackintosh/" style="font-size: 14px; color: #808080">Hackintosh</a> <a href="/tags/LEDE/" style="font-size: 14.86px; color: #6e6e6e">LEDE</a> <a href="/tags/Linux/" style="font-size: 20px; color: #000">Linux</a> <a href="/tags/Mac/" style="font-size: 15.71px; color: #5b5b5b">Mac</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #808080">MongoDB</a> <a href="/tags/Mongodb/" style="font-size: 14px; color: #808080">Mongodb</a> <a href="/tags/MySQL/" style="font-size: 18.29px; color: #252525">MySQL</a> <a href="/tags/NAS/" style="font-size: 14px; color: #808080">NAS</a> <a href="/tags/Nextcloud/" style="font-size: 16.57px; color: #494949">Nextcloud</a> <a href="/tags/PVE/" style="font-size: 14px; color: #808080">PVE</a> <a href="/tags/Proxmox-VE/" style="font-size: 14px; color: #808080">Proxmox VE</a> <a href="/tags/Python/" style="font-size: 14px; color: #808080">Python</a> <a href="/tags/Python3/" style="font-size: 14px; color: #808080">Python3</a> <a href="/tags/Ruby/" style="font-size: 14px; color: #808080">Ruby</a> <a href="/tags/Ryzentosh/" style="font-size: 14px; color: #808080">Ryzentosh</a> <a href="/tags/SMB/" style="font-size: 14px; color: #808080">SMB</a> <a href="/tags/SQL/" style="font-size: 14px; color: #808080">SQL</a> <a href="/tags/Ubuntu/" style="font-size: 19.14px; color: #121212">Ubuntu</a> <a href="/tags/Ubuntu-Server/" style="font-size: 14px; color: #808080">Ubuntu Server</a> <a href="/tags/VPN-L2TP-SoftEther-Linux/" style="font-size: 14px; color: #808080">VPN, L2TP, SoftEther, Linux</a> <a href="/tags/Web/" style="font-size: 14px; color: #808080">Web</a> <a href="/tags/Windows/" style="font-size: 14.86px; color: #6e6e6e">Windows</a> <a href="/tags/XFS/" style="font-size: 14px; color: #808080">XFS</a> <a href="/tags/app/" style="font-size: 14px; color: #808080">app</a> <a href="/tags/apt/" style="font-size: 14px; color: #808080">apt</a> <a href="/tags/bluetooth/" style="font-size: 14px; color: #808080">bluetooth</a> <a href="/tags/bootable-USB/" style="font-size: 14px; color: #808080">bootable USB</a> <a href="/tags/brew/" style="font-size: 14px; color: #808080">brew</a> <a href="/tags/dns/" style="font-size: 14px; color: #808080">dns</a> <a href="/tags/esxi/" style="font-size: 14px; color: #808080">esxi</a> <a href="/tags/github/" style="font-size: 14px; color: #808080">github</a> <a href="/tags/hackintosh/" style="font-size: 15.71px; color: #5b5b5b">hackintosh</a> <a href="/tags/hexo/" style="font-size: 14px; color: #808080">hexo</a> <a href="/tags/kvm/" style="font-size: 14px; color: #808080">kvm</a> <a href="/tags/library/" style="font-size: 14px; color: #808080">library</a> <a href="/tags/linux/" style="font-size: 17.43px; color: #373737">linux</a> <a href="/tags/log/" style="font-size: 14px; color: #808080">log</a> <a href="/tags/lxc/" style="font-size: 14px; color: #808080">lxc</a> <a href="/tags/mac/" style="font-size: 14px; color: #808080">mac</a> <a href="/tags/macOS/" style="font-size: 14px; color: #808080">macOS</a> <a href="/tags/merlin/" style="font-size: 14px; color: #808080">merlin</a> <a href="/tags/minidlna/" style="font-size: 14px; color: #808080">minidlna</a> <a href="/tags/mojave/" style="font-size: 14.86px; color: #6e6e6e">mojave</a> <a href="/tags/nodejs/" style="font-size: 14px; color: #808080">nodejs</a> <a href="/tags/ntp/" style="font-size: 14px; color: #808080">ntp</a> <a href="/tags/omv/" style="font-size: 14px; color: #808080">omv</a> <a href="/tags/omv-extras/" style="font-size: 14px; color: #808080">omv-extras</a> <a href="/tags/openmediavault/" style="font-size: 14px; color: #808080">openmediavault</a> <a href="/tags/package/" style="font-size: 14px; color: #808080">package</a> <a href="/tags/pip/" style="font-size: 14px; color: #808080">pip</a> <a href="/tags/pve/" style="font-size: 15.71px; color: #5b5b5b">pve</a> <a href="/tags/python/" style="font-size: 14px; color: #808080">python</a> <a href="/tags/router/" style="font-size: 14.86px; color: #6e6e6e">router</a> <a href="/tags/shell/" style="font-size: 14.86px; color: #6e6e6e">shell</a> <a href="/tags/system-time/" style="font-size: 14.86px; color: #6e6e6e">system time</a> <a href="/tags/tar-Linux/" style="font-size: 14px; color: #808080">tar, Linux</a> <a href="/tags/ubuntu/" style="font-size: 14.86px; color: #6e6e6e">ubuntu</a> <a href="/tags/vim/" style="font-size: 14px; color: #808080">vim</a> <a href="/tags/virtualbox/" style="font-size: 14px; color: #808080">virtualbox</a> <a href="/tags/vmfs/" style="font-size: 14px; color: #808080">vmfs</a> <a href="/tags/windows/" style="font-size: 14px; color: #808080">windows</a> <a href="/tags/图床/" style="font-size: 14px; color: #808080">图床</a> <a href="/tags/实用/" style="font-size: 14.86px; color: #6e6e6e">实用</a> <a href="/tags/常用命令/" style="font-size: 14.86px; color: #6e6e6e">常用命令</a> <a href="/tags/编译/" style="font-size: 14px; color: #808080">编译</a> <a href="/tags/软路由/" style="font-size: 14px; color: #808080">软路由</a> <a href="/tags/配置/" style="font-size: 14px; color: #808080">配置</a> <a href="/tags/黑苹果/" style="font-size: 14px; color: #808080">黑苹果</a>
+    </div>
+</div>
+
+
+
+  <section class='m_widget categories'>
+<div class='header'>Categories</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/Code/"><div class='name'>Code</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Docker/"><div class='name'>Docker</div><div class='badget'>5</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Linux/"><div class='name'>Linux</div><div class='badget'>16</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Mac/"><div class='name'>Mac</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/MySQL/"><div class='name'>MySQL</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/NAS/"><div class='name'>NAS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Nextcloud/"><div class='name'>Nextcloud</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/PVE/"><div class='name'>PVE</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Proxmox-VE/"><div class='name'>Proxmox VE</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Python/"><div class='name'>Python</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Ubuntu/"><div class='name'>Ubuntu</div><div class='badget'>8</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Web/"><div class='name'>Web</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Windows/"><div class='name'>Windows</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/hackintosh/"><div class='name'>hackintosh</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/linux/"><div class='name'>linux</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/macOS/"><div class='name'>macOS</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/openmediavault/"><div class='name'>openmediavault</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/pve/"><div class='name'>pve</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/router/"><div class='name'>router</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/折腾/"><div class='name'>折腾</div><div class='badget'>3</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/黑苹果/"><div class='name'>黑苹果</div><div class='badget'>2</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
+        </a>
+      
+        <a href="https://github.com/xfzka" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <a href='https://github.com/stkevintan/hexo-theme-material-flow' class="codename">MaterialFlow</a> designed by <a href="http://keyin.me/" target="_blank">Kevin Tan</a>.</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "";
+  var SEARCH_SERVICE = "hexo";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
